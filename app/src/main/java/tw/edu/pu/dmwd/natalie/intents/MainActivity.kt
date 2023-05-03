@@ -32,8 +32,13 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "子青老師FB", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+            var it = Intent(Intent.ACTION_VIEW)
+
+            it.data = Uri.parse("https://www.facebook.com/tcyang1971")
+
+            startActivity(it)
         }
     }
 
